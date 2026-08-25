@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductoSaveRequest;
 use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -42,12 +43,9 @@ class ProductController extends Controller
         return view('product.create')->with('viewData', $viewData);
     }
 
-    public function save(Request $request): RedirectResponse
+    public function save(ProductoSaveRequest $request): RedirectResponse
     {
-        $request->validate([
-            'name' => 'required',
-            'price' => 'required',
-        ]);
+        $request->validated();
 
         Product::create($request->only(['name', 'price']));
 

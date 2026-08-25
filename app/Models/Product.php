@@ -20,8 +20,6 @@ class Product extends Model
      */
     protected $fillable = ['name', 'price'];
 
-    // TODO: Estoy convencido 300% que se puede hacer los setters y getters de manera automatica
-
     public function getId(): int
     {
         return $this->attributes['id'];

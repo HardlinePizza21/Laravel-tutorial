@@ -14,20 +14,20 @@ class HomeController extends Controller
     public function about(): View
     {
 
-        $data = [
+        $viewData = [
             'title' => 'About us - Online Store',
             'subtitle' => 'About us',
             'desc' => 'This is an about page ...',
             'author' => 'Samuel Madrid Ossa',
         ];
 
-        return view('home.about')->with('data', $data);
+        return view('home.about')->with('data', $viewData);
     }
 
     public function contact(): View
     {
 
-        $data = [
+        $viewData = [
             'title' => 'aaa',
             'subtitle' => 'bbb',
             'address' => 'Calle 38 A...',
@@ -35,6 +35,6 @@ class HomeController extends Controller
             'name' => 'Samuel Madrid Ossa',
         ];
 
-        return view('home.contact')->with('data', $data);
+        return view('home.contact')->with('data', $viewData);
     }
 }
