@@ -26,7 +26,7 @@ class ProductoSaveRequest extends FormRequest
             [
                 'name' => 'required',
                 'price' => 'required',
-            ] 
+            ],
         ];
     }
 }
